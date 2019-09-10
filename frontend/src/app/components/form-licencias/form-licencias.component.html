@@ -1,0 +1,76 @@
+<div class="page-content p-5" id="content">
+    <!-- Demo content -->
+    <h2 class="display-4 text-break"><strong>{{tittle}}</strong></h2>
+    <p class="lead mb-0">Build a fixed sidebar using Bootstrap 4 vertical navigation and media objects.</p>
+    <p class="lead text-black-50">Snippet by
+        <a href="https://bootstrapious.com/snippets" class="text-black-50">
+            <u>Bootstrapious</u></a>
+    </p>
+    <div class="separator"></div>
+    <section class="row widgets justify-content-between">
+        <div class="col-12 col-md-4 col-lg-4">
+            <div class="card">
+                <div class="card-body p-md-4">
+                    <form action="">
+                        <h2 class="text-center">Ingreso de Licencias</h2>
+                        <div class="form-group has-success">
+                            <input type="text" name="name" [(ngModel)]="licencia.name" placeholder="Software" class="form-control" autofocus required="true">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="version" [(ngModel)]="licencia.version" placeholder="Version" class="form-control" autofocus required="true">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="stock" [(ngModel)]="licencia.stock" placeholder="Cantidad" class="form-control" required="true ">
+                        </div>
+                        <div class="form-group ">
+                            <input type="text" name="img " [(ngModel)]="licencia.img " placeholder="Url " class=" form-control " autofocus required="true ">
+                        </div>
+                        <button type="submit " class="btn btn-success btn-block " (click)="saveNewLicencia() ">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-8 ">
+            <div class="card ">
+                <div class="card-header ">
+                    <div class="float-left ">
+                        <h4>Listado</h4>
+                    </div>
+                    <!--<div class="float-right ">
+                        <button type="button " class="btn btn-primary " [routerLink]="[ 'novo'] ">Licencia Nueva</button>
+                    </div>-->
+                </div>
+                <table class="table table-hover ">
+                    <thead>
+                        <tr>
+                            <th>Software</th>
+                            <th>Version</th>
+                            <th>Stock</th>
+                            <th>Fecha creado</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class=" " *ngFor="let licencia of lis ">
+                            <td>{{licencia.name}}</td>
+                            <td>{{licencia.version}}</td>
+                            <td>{{licencia.stock}}</td>
+                            <td>{{licencia.created_at}}</td>
+                            <td>
+                                <span class="float-center ">
+                                    <button class="btn btn-outline-success">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    {{' '}}
+                                    <button (click)="deleteRow(licencia.id) " class="btn btn-outline-danger ">
+                                        <i class="fas fa-trash-alt "></i>
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>

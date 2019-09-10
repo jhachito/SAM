@@ -1,0 +1,64 @@
+<!-- Vertical navbar -->
+<div class="containe">
+    <div class="vertical-nav bg-white" id="sidebar">
+        <div class="py-4 px-3 mb-4 bg-light">
+            <div class="media d-flex align-items-center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjM2rWPFD2uiasdIOspgSG2c27FDKReaI18a87_-7E0-Em1Aeqig" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+                <div class="media-body">
+                    <h4 class="m-0">Jhachito</h4>
+                    <p class="font-weight-light text-muted mb-0">Web developer</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
+
+        <ul class="nav flex-column bg-white mb-0">
+            <li class="nav-item">
+                <a [routerLink]="['/']" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-home mr-3 text-primary fa-fw"></i> Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/about']" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-user mr-3 text-primary fa-fw"></i> About
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/licencias/add']" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-plus mr-3 text-primary fa-fw"></i> Add licencias
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/licencias']" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-th-list mr-3 text-primary fa-fw"></i> Listar licencias
+                </a>
+            </li>
+        </ul>
+
+        <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Charts</p>
+
+        <ul class="nav flex-column bg-white mb-0">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-dark font-italic">
+                    <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i> Area charts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-dark font-italic">
+                    <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i> Bar charts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-dark font-italic">
+                    <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i> Pie charts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-dark font-italic">
+                    <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i> Line charts
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End vertical navbar -->
+</div>

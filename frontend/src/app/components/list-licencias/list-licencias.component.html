@@ -1,0 +1,28 @@
+<div class="page-content p-5" id="content">
+    <!-- Demo content -->
+    <h2 class="display-4 text-break"><strong>{{tittle}}</strong></h2>
+    <p class="lead mb-0">Build a fixed sidebar using Bootstrap 4 vertical navigation and media objects.</p>
+    <p class="lead text-black-50">Snippet by
+        <a href="https://bootstrapious.com/snippets" class="text-black-50">
+            <u>Bootstrapious</u></a>
+    </p>
+    <div class="separator"></div>
+    <div class="row justify-content-lg-start">
+        <div class="col-lg-2 col-md-4" *ngFor="let licencia of lis">
+            <div class="text-dark card2 text-center">
+                <div style="padding: 4px;" class="bg-dark text-white card-header d-flex justify-content-between align-items-center">
+                    <strong>{{licencia.name}}</strong>
+                    <button class="btn btn-danger">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </div>
+                <img src="{{licencia.img}}" class="card-img-top" alt="Cinque Terre" width="200px" height="174px">
+                <div class="card-body text-md-left">
+                    <p class="parrafo">Version: <strong>{{licencia.version}}</strong>
+                        <br> Licencias: <strong>{{licencia.stock}}</strong></p>
+                    <a href="#" class="btn btn-info btn-block">Edit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
